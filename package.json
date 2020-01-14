@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^3.8.2"
+  },
   "devDependencies": {
     "citation-js": "^0.5.0-alpha.4",
     "cz-conventional-changelog": "^3.0.2",
@@ -14,9 +16,11 @@
     "js-base64": "^2.5.1",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "wait-on": "^3.3.0"
   },
   "scripts": {
+    "start": "npm run serve & wait-on http://localhost:1313",
     "precommit": "node index.js && hugo",
     "commit": "git-cz",
     "fetch": "node index.js",
@@ -25,7 +29,9 @@
     "prebuild": "node index.js",
     "build": "hugo --baseURL $BASEURL",
     "version": "hugo version",
-    "new": "hugo new"
+    "new": "hugo new",
+    "test:run": "cypress run",
+    "test:open": "cypress open"
   },
   "repository": {
     "type": "git",
