@@ -12,5 +12,12 @@ describe('Home Page test', function () {
 
     cy.url()
       .should('include', 'services')
+  }),
+
+  it('Has no detectable a11y violations on load', () => {
+    cy.visit('http://localhost:1313')
+    cy.injectAxe()
+    // Test the page at initial load
+    cy.checkA11y()
   })
 })

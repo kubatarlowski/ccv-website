@@ -7,7 +7,9 @@
     "cypress": "^3.8.2"
   },
   "devDependencies": {
+    "axe-core": "^3.4.1",
     "citation-js": "^0.5.0-alpha.4",
+    "cypress-axe": "^0.5.3",
     "cz-conventional-changelog": "^3.0.2",
     "dotenv": "^8.2.0",
     "git-cz": "^3.3.0",
@@ -38,7 +40,7 @@
     "url": "git+https://github.com/brown-data-science/ccv-website.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/brown-data-science/ccv-website/issues"
   },
