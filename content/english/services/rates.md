@@ -14,23 +14,32 @@ lead: We provide services with limited resources at **no cost** to all
 
 {{% table c="striped" hover="false" w="100" head="dark" %}}
 
-| Account(s) Type | CPU Cores and Walltime | Cost | Description |
-| --- | --- | --- | --- |
-| Exploratory (PI Sponsored) | 32 for 48 hours per job, 2 std GPUs for 48 hours† | Free† | Available to all members affiliated with Brown |
-| Exploratory (No PI) | 32 for 48 Hours | Free | No Data Directory is assigned |
-| HPC Priority |208 for 96 hours | $200/user/quarter | For CPU intensive workloads |
-| HPC Priority+ | 416 for 96 hours | $400/user/quarter | For CPU intensive workloads |
-| HPC GPU Priority Standard | 4 std GPU for 96 hours, Titan RTX or lower | $200/user/quarter | Basic GPU intensive workloads |
-| HPC GPU Priority Standard+ | 8 std GPU for 96 hours, Titan RTX or lower‡ | $400/user/quarter | For workloads that require multiple GPUs
-| HPC GPU Priority High End | 4 high-end GPU for 96 hours, Tesla V100‡ | $400/user/quarter | For workloads that require High-end GPUs
-| HPC Priority Large Memory | 32 cores for 96 hours with 760GB real memory or 2TB Virtual | $100/user/quarter | For very memory-intensive workloads
-| Condo Rental | 256 Cores | $10,000 | No wall-time limits |
+| Account(s) Type | CPU Cores | Memory(GB) | GPU | Max Walltime* (Hours) | Data Directory | Cost (Billed Quarterly) | Partition 
+| --- | --- | --- | --- | --- | --- | --- | --- | 
+| Individual Exploratory (no PI) | 32 </br> 4 </br> 32| 246 </br> 192 </br> 768  | No GPUs </br> 2 Standard GPUs </br> No GPUs </br> | 48 | No | $0 | Batch </br> GPU </br> Bigmem
+| Sponsored Exploratory (with PI) | 32 </br> 4 </br> 32| 246 </br> 192 </br> 768  | No GPUs </br> 2 Standard GPUs </br> No GPUs </br> | 48 | Yes | $0 | Batch </br> GPU </br> Bigmem
+| HPC Priority |208 | 1,500 | 2 Standard GPUs | 96 | Yes | $200 | Batch 
+| HPC Priority+ | 416 | 3,000 | 2 Standard GPUs | 96 | Yes | $400 | Batch
+| Standard GPU Priority| 8 | 192 | 4 Standard GPUs | 96 | Yes | $400 | GPU
+| Standard GPU Priority+ | 16 | 384 | 8 Standard GPUs | 96 | Yes | $400 | GPU
+| High End GPU Priority | 16 | 256 | 4 high-end GPUs (Tesla V100) | 96 | Yes | $400 | GPU
+| Large Memory Priority | 32 | 2TB | - | 96 | Yes | $100 | Bigmem
+| Condo Rental | 256 | 2,000G | - | No wall-time limits | Yes | $10,000 (Yearly) | Condo
 
-> Each account is assigned 20G Home, 512G Scratch (purged every 30 days), and 256G Data Directory (shared amongst members of the group) by default. Except for no-PI exploratory accounts, they do not get a Data directory.
+> Storage Quotas for every account (except Individual Exploratory):
+* 20G Home Directory
+* 512G Scratch (files and directories older than 30 days are purged)
+* 1TB Data Directory (shared amongst members of the group) by default.
 
-> † Free exploratory accounts are available to all faculty and PIs at Brown. Priority accounts have a higher Quality-of-Service (QOS) i.e. priority accounts will have faster job start times.
+> GPU Definition:
+* Standard - QuadroRTX or lower
+* HighEnd - Tesla v100
 
-> ‡The maximum number of cores and duration may change based on cluster utilization. Priority accounts each have a Quality-of-Service (QOS) allowing up to 208 cores, 1TB memory, and a total per-job limit of 998,400 core-minutes. This allows a 208-core job to run for 80 hours, a 104-core job to run for 160 hours, or 208 1-core jobs to run for 80 hours.
+> Exploratory accounts are available to all faculty and PIs at Brown at no cost. 
+> Priority accounts have a higher Quality-of-Service (QOS) i.e. priority accounts will have faster job start times.
+
+> *The maximum number of cores and duration may change based on cluster utilization. For example - HPC Priority account has a Quality-of-Service (QOS) allowing up to 208 cores, 1TB memory, and a total per-job limit of 998,400 core-minutes. This allows a 208-core job to run for 80 hours, a 104-core job to run for 160 hours, or 208 1-core jobs to run for 80 hours.
+
 
 # Staff Services
 | Support Level | Description | Cost |
@@ -44,5 +53,5 @@ lead: We provide services with limited resources at **no cost** to all
 # Research Data Storage
 
 * 1TB per Brown Faculty Member - Free
-* 10TB per awarded Grant at the request of the Brown PI - an active grant account number will be required to provide this allocation and the data will be migrated to archive storage at the end of the grant.
+* 10TB per awarded Grant at the request of a Brown PI - an active grant account number will be required to provide this allocation and the data will be migrated to archive storage at the end of the grant.
 * Additional Storage Allocation - Year to Year - $100 / Terabyte / year
